@@ -6,7 +6,7 @@ int main() {
 	printf("Insira número de visitantes: ");
 	scanf("%d",&n);
 	FILE *fptr;
-	fptr=(fopen("visitantes.txt","w"));
+	fptr=(fopen("visitantes.txt","a"));
 	if(fptr==NULL) {
 		printf("Error!");
 		exit(1);
