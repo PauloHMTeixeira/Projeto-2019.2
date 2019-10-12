@@ -1,3 +1,5 @@
+//forms utilizado "a" para dar append nno arquivo txt
+
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
