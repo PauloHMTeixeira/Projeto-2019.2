@@ -1,3 +1,5 @@
+//forms utilizando "w" para write no arquivo txt (quando não criado ainda).
+
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
