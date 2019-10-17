@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
-	char name[50], nacio[50];
+	char name[50], surname[50], nacio[50];
 	int marks,i,n;
 	printf("Insira número de visitantes: ");
 	scanf("%d",&n);
@@ -15,12 +15,12 @@ int main() {
 	}
 	for (i=0;i<n;++i) {
 		printf("Para visitante%d\nInsira nome: ",i+1);
-		scanf("%s",name);
+		scanf("%s %s",name, surname);
 		printf("Insira nacionalidade: ");
 		scanf("%s",nacio);
 		printf("Insira idade: ");
 		scanf("%d",&marks);
-		fprintf(fptr,"\nName: %s \nIdade: %d \nNacionalidade: %s \n",name,marks,nacio);
+		fprintf(fptr,"\nName: %s %s \nIdade: %d \nNacionalidade: %s \n",name,surname,marks,nacio);
 	}
 	fclose(fptr);
 	return 0;
