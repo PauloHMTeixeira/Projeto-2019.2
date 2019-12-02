@@ -10,16 +10,21 @@ int main(){
     int c2;
     char conteudo[15000];
     char arquivo[15000];
-    char name[50], surname[50], nacio[50];
-    int marks;
+    struct student
+    {
+        char name[50], surname[50], nacio[50], necess[50];
+        int marks;
+    } s;
     printf("Diga o nome e sobrenome do(a) visitante: ");
-    scanf("%s %s", name, surname);
+    scanf("%s %s", s.name, s.surname);
     printf("Diga a nacionalidade do(a) visitante: ");
-    scanf("%s", nacio);
+    scanf("%s", s.nacio);
     printf("Diga a idade do(a) visitante: ");
-    scanf("%d", &marks);
+    scanf("%d", &s.marks);
+    printf("O visitante tem necessidades especiais? (Cadeirante, dificuldade de locomoção, etc) ");
+    scanf("%s", s.necess);
     fp = fopen("banco_dados_branco.json", "w");
-    fprintf(fp, ",\n{\n    !%s %s!: {\n        !Nacionalidade!:!%s!,\n        !Idade!:!%d!\n    }",name, surname, nacio, marks);
+    fprintf(fp, ",\n    !%s %s!: {\n        !Nacionalidade!:!%s!,\n        !Idade!:!%d!,\n        !NecessidadesEspeciais!:!%s!\n    }",s.name, s.surname, s.nacio, s.marks, s.necess);
     fclose(fp);
 
     fp = fopen("banco_dados_branco.json", "r");
