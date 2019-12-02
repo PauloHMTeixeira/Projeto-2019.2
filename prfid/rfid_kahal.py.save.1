@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+import json
+import os
+import sys
+import signal
+import RPi.GPIO as GPIO
+from mfrc522 import SimpleMFRC522
+
+acessos_autorizados = [915676463990]
+
+reader = SimpleMFRC522()
+
+try:
+	id, text = reader.read()
+	print(id)
+	print(text)
+
+
+finally:
+	GPIO.cleanup()
+
+
+
+file = open('teste.json', 'r')
+data = json.load(file)
+file.close()
+
+for line in data:
+        if '"Cartao:" "1"' in line['setup']:
+for entry in in output_json['images'][0]['classifiers'][0]['classes']:
+    if ('class' in entry) and (entry['class'] == 'person'):            print("deu certo")
