@@ -1,8 +1,0 @@
-
-Name: Paulo 
-Idade: 19 
-Nacionalidade: Brasil 
-
-Name: Carla 
-Idade: 20 
-Nacionalidade: Brasil 
